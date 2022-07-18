@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { Player } from "@remotion/player";
+import React from "react";
+import { BalloonTemplate } from "./HelloWorld";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Player
+      component={BalloonTemplate}
+      durationInFrames={2000}
+      compositionWidth={1280}
+      compositionHeight={720}
+      fps={36}
+      controls
+      style={{
+        width: "100%",
+      }}
+    />
   );
-}
+};
 
 export default App;
