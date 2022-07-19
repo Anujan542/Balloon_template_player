@@ -10,7 +10,7 @@ import Intro from "./components/Intro/Intro";
 
 export const BalloonTemplate = () => {
   return (
-    <AbsoluteFill style={{ display: "flex", backgroundColor: "#5e5b5b" }}>
+    <AbsoluteFill style={{ display: "flex", backgroundColor: "#0b0b0b" }}>
       <Sequence from={0} durationInFrames={130}>
         <Intro />
       </Sequence>
