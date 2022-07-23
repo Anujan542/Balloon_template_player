@@ -41,6 +41,7 @@ const BalloonEffect = ({ color1, color2 }) => {
             style={{ backgroundColor: color1 }}
           >
             <div className="thread" style={{ backgroundColor: color1 }} />
+            <span class="top-c"></span>
           </div>
           <div
             className="ballon"

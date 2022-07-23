@@ -2,23 +2,33 @@ import { AbsoluteFill, Sequence } from "remotion";
 import Balloons from "./components/Effects/Balloons";
 import { FadeTransition } from "./components/Effects/FadeTransition";
 import BalloonEffect from "./components/FirstLayer/BalloonEffect";
+import Balloon1 from "./components/FirstLayer/Balloons/Balloon1";
+import Balloon2 from "./components/FirstLayer/Balloons/Balloon2";
+import Balloon3 from "./components/FirstLayer/Balloons/Balloon3";
 import BalloonTest from "./components/FirstLayer/BalloonTest";
 import Image from "./components/FirstLayer/Image";
 import { ParagraphTitle } from "./components/FirstLayer/ParagraphTitle";
 import UnderScorePath from "./components/FirstLayer/UnderscorePath";
 import Intro from "./components/Intro/Intro";
+import StudentPersonalVideo from "./components/SecondLayer/StudentPersonal";
 
 export const BalloonTemplate = () => {
   return (
-    <AbsoluteFill style={{ display: "flex", backgroundColor: "#0b0b0b" }}>
+    <AbsoluteFill style={{ display: "flex", backgroundColor: "#2c2c2c" }}>
       <Sequence from={0} durationInFrames={130}>
         <Intro />
       </Sequence>
       <Sequence from={128} durationInFrames={302}>
         <FadeTransition type="in" duration={30}>
           {/* <BalloonEffect color1="#567d2e" color2="#ffb300" /> */}
-          <BalloonTest color1="#567d2e" color2="#ffb300" />
+          <Balloon1 color1="#567d2e" />
         </FadeTransition>
+      </Sequence>
+      <Sequence from={140} durationInFrames={290}>
+        <Balloon2 color2="#ffb300" />
+      </Sequence>
+      <Sequence from={150} durationInFrames={280}>
+        <Balloon3 />
       </Sequence>
       <Sequence from={150} durationInFrames={280}>
         <Image />
@@ -64,6 +74,9 @@ export const BalloonTemplate = () => {
       </Sequence>
       <Sequence from={420} durationInFrames={20}>
         <Balloons color1="#567d2e" color2="#ffb300" />
+      </Sequence>
+      <Sequence from={440} durationInFrames={200}>
+        <StudentPersonalVideo title="#Bport2022" />
       </Sequence>
     </AbsoluteFill>
   );
