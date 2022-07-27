@@ -10,6 +10,8 @@ import {
 import styled from "styled-components";
 import { StudentTitle } from "./StudentTitle";
 
+import live from "../assets/live.mov";
+
 const Container = styled(AbsoluteFill)`
   // background-color: #00bfff;
   flex-direction: row;
@@ -27,7 +29,7 @@ const Right = styled.div`
 `;
 
 const Spacer = styled.div`
-  width: 100px;
+  width: 200px;
 `;
 
 const Row = styled.div`
@@ -35,7 +37,7 @@ const Row = styled.div`
   display: flex;
 `;
 
-const StudentPersonalVideo = ({ title }) => {
+const StudentPersonalVideo = ({ title, volume }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
@@ -78,14 +80,15 @@ const StudentPersonalVideo = ({ title }) => {
         <Spacer />
         <Right>
           <>
-            {/* <OffthreadVideo
-              src={studentVideo}
+            <OffthreadVideo
+              volume={volume}
+              src={live}
               style={{
-                marginTop: "2rem",
-                maxHeight: "60%",
-                maxWidth: "100%",
+                marginTop: "8rem",
+                // maxHeight: "60%",
+                // maxWidth: "100%",
               }}
-            /> */}
+            />
           </>
         </Right>
       </Row>

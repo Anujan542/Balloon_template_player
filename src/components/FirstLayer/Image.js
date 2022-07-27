@@ -12,6 +12,8 @@ import styled from "styled-components";
 import { MainTitle } from "./MainTitle";
 import Title from "./Title";
 
+import image from "../assets/studentImage.jpeg";
+
 import "./imageRotate.css";
 
 const Container = styled(AbsoluteFill)`
@@ -29,7 +31,7 @@ const Right = styled.div`
   justify-content: center;
   align-items: center;
   padding-right: 0px;
-  margin-left: 650px;
+  margin-left: 700px;
 `;
 
 const Spacer = styled.div`
@@ -56,6 +58,8 @@ const Image = () => {
   const opacity = interpolate(progress, [0, 0.5], [500, 1], {
     extrapolateRight: "clamp",
   });
+
+  const rotate = interpolate(frame, [0, 1], [0, 0.1]);
 
   return (
     <Container>
@@ -97,16 +101,19 @@ const Image = () => {
         </Left>
         <Spacer />
         <Right>
-          <div className="rotate">
+          <div style={{ transform: `rotate(${-30}deg)` }}>
             <Img
-              src="https://pbs.twimg.com/media/FSrWJNcXwAEpINW.jpg"
+              src={image}
+              //    src="https://pbs.twimg.com/media/FSrWJNcXwAEpINW.jpg"
               style={{
                 borderBottom: "60px solid white",
                 borderTop: "10px solid white",
                 borderLeft: "10px solid white",
                 borderRight: "10px solid white",
-                maxWidth: "500px",
+                maxWidth: "400px",
                 maxHeight: "500px",
+
+                transform: `rotate(${rotate}deg)`,
                 //  transform: `translateY(${opacity}px)`,
               }}
             />

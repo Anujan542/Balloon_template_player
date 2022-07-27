@@ -1,5 +1,6 @@
 import React from "react";
 import { AbsoluteFill, useCurrentFrame } from "remotion";
+import "./font.css";
 
 const Title = ({
   titleText,
@@ -24,12 +25,13 @@ const Title = ({
     >
       <div
         style={{
+          fontFamily: "sans-serif",
           fontSize: size,
           titleColor,
           fontWeight,
           fontStyle,
           top,
-          marginRight: "19rem",
+          marginRight: "15rem",
           position: "absolute",
           color: titleColor,
         }}

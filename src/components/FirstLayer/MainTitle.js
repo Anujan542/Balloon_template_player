@@ -6,6 +6,8 @@ import {
   useVideoConfig,
 } from "remotion";
 
+import "./font.css";
+
 export const MainTitle = ({
   title1,
   title2,
@@ -36,12 +38,13 @@ export const MainTitle = ({
     >
       <div
         style={{
+          fontFamily: "monospace",
           fontSize: size,
           titleColor,
           fontWeight,
           fontStyle,
           top,
-          marginRight: "19rem",
+          marginRight: "15rem",
           textAlign: "center",
           position: "absolute",
           color: titleColor,

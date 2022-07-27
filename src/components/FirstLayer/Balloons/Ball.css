@@ -12,6 +12,22 @@
   background-color: red;
   position: relative;
   margin: 0 5px;
+  animation: moveBallon 7s infinite alternate;
+}
+
+@keyframes moveBallon {
+  0% {
+    transform: translateY(10px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(11px) rotate(7deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(-4deg);
+  }
+  100% {
+    transform: translateY(-50px) rotate(8deg);
+  }
 }
 
 /* .balloon:before {

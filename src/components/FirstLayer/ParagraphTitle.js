@@ -40,6 +40,7 @@ export const ParagraphTitle = ({
     >
       <p
         style={{
+          fontFamily: "sans-serif",
           transform: `translateY(${translateY}px)`,
           fontSize: size,
           titleColor,

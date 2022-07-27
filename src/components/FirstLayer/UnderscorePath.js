@@ -33,7 +33,7 @@ const UnderScorePath = ({ color }) => {
       <AbsoluteFill
         style={{
           marginTop: "24rem",
-          marginLeft: "15rem",
+          marginLeft: "17rem",
         }}
       >
         <svg
@@ -58,7 +58,7 @@ const UnderScorePath = ({ color }) => {
       <AbsoluteFill
         style={{
           marginTop: "24rem",
-          marginLeft: "15rem",
+          marginLeft: "18rem",
         }}
       >
         <svg
