@@ -6,7 +6,7 @@ const App = () => {
   return (
     <Player
       component={BalloonTemplate}
-      durationInFrames={1000}
+      durationInFrames={2000}
       compositionWidth={1280}
       compositionHeight={720}
       fps={36}

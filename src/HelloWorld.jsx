@@ -1,4 +1,5 @@
-import { AbsoluteFill, Sequence } from "remotion";
+import { AbsoluteFill, continueRender, delayRender, Sequence } from "remotion";
+import { getVideoMetadata } from "@remotion/media-utils";
 import Balloons from "./components/Effects/Balloons";
 import { FadeTransition } from "./components/Effects/FadeTransition";
 import BalloonEffect from "./components/FirstLayer/BalloonEffect";
@@ -15,6 +16,8 @@ import StudentPersonalVideo from "./components/SecondLayer/StudentPersonal";
 
 import "animate.css";
 import { AudioSound } from "./components/Audio/main";
+import StudentVideo from "./components/StudentVideo/StudentVideo";
+import { useEffect, useState } from "react";
 
 export const BalloonTemplate = () => {
   const color1 = "#567d2e";
@@ -22,7 +25,13 @@ export const BalloonTemplate = () => {
 
   return (
     <>
-      <AbsoluteFill style={{ display: "flex", backgroundColor: "#2c2c2c" }}>
+      <AbsoluteFill
+        style={{
+          display: "flex",
+          backgroundImage:
+            "url(https://allfreedesigns.com/wp-content/uploads/2015/06/black-patterns-17.jpg)",
+        }}
+      >
         <Sequence from={0} durationInFrames={130}>
           <Intro />
         </Sequence>
@@ -83,15 +92,20 @@ export const BalloonTemplate = () => {
         <Sequence from={420} durationInFrames={20}>
           <Balloons color1={color1} color2={color2} />
         </Sequence>
-        <Sequence from={440} durationInFrames={350}>
-          <StudentPersonalVideo title="#Bport2022" volume={1} />
+        <Sequence from={440} durationInFrames={665}>
+          <StudentVideo title="ANUJAN NESARAJAH" speed={1} volume={1} />
+          {/* <StudentPersonalVideo title="#Bport2022" volume={1} /> */}
         </Sequence>
-        <Sequence from={740} durationInFrames={20}>
+        <Sequence from={1105} durationInFrames={20}>
           <Balloons color1={color1} color2={color2} />
         </Sequence>
-        <Sequence from={750}>
-          <OutroMain />
+        <Sequence from={1125} durationInFrames={530}>
+          <StudentVideo title="#NPCGrad" speed={0.7} volume={0} />
+          {/* <StudentPersonalVideo title="#Bport2022" volume={1} /> */}
         </Sequence>
+        {/* <Sequence from={750}>
+          <OutroMain />
+        </Sequence> */}
         {/* <AudioSound /> */}
       </AbsoluteFill>
     </>

@@ -1,0 +1,113 @@
+.video_balloon-g {
+  left: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}
+.Video_balloon {
+  height: 130px;
+  width: 104px;
+  border-radius: 80% 80% 80% 80%;
+  background-color: red;
+  position: relative;
+  margin: 0 5px;
+  animation: moveBallon 7s infinite alternate;
+}
+
+@keyframes moveBallon {
+  0% {
+    transform: translateY(10px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(11px) rotate(7deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(-4deg);
+  }
+  100% {
+    transform: translateY(-50px) rotate(8deg);
+  }
+}
+
+/* .balloon:before {
+  content: "";
+  color: rgba(182, 15, 97, 0.9);
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid red;
+} */
+.balloon-blue {
+  background-color: #1c9aee;
+}
+.balloon-blue:before {
+  border-bottom-color: #1c9aee;
+}
+.balloon-orange {
+  background-color: orange;
+}
+.balloon-orange:before {
+  border-bottom-color: orange;
+}
+.balloon-green {
+  background-color: green;
+}
+.balloon-green:before {
+  border-bottom-color: green;
+}
+.balloon-purple {
+  background-color: purple;
+}
+.balloon-purple:before {
+  border-bottom-color: purple;
+}
+.balloon-mo {
+  background-color: #d90bf7;
+}
+.balloon-mo:before {
+  border-bottom-color: #d90bf7;
+}
+.balloon-gr {
+  background-color: #0bf7bc;
+}
+.balloon-gr:before {
+  border-bottom-color: #0bf7bc;
+}
+.balloon-ref {
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 100%;
+  height: 80%;
+  border-radius: 90%;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.41015625) 0%,
+    rgba(148, 214, 233, 0) 100%
+  );
+}
+.balloon span.top-c {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  width: 15px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: rotate(48deg);
+}
+.balloon span.left-c {
+  position: absolute;
+  top: 36px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: rotate(48deg);
+}
